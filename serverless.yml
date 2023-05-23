@@ -78,28 +78,28 @@ functions:
       - http:
           method: post
           <<: *default_cors
-          path: api/accounts/prelogin
+          path: identity/accounts/prelogin
   profile:
     handler: src/accounts.profileHandler
     events:
       - http:
           method: get
           <<: *default_cors
-          path: api/accounts/profile
+          path: identity/accounts/profile
   profile_put:
     handler: src/accounts.putProfileHandler
     events:
       - http:
           method: put
           <<: *default_cors
-          path: api/accounts/profile
+          path: identity/accounts/profile
   keys:
     handler: src/keys.handler
     events:
       - http:
           method: post
           <<: *default_cors
-          path: api/accounts/keys
+          path: identity/accounts/keys
   register:
     handler: src/register.handler
     environment:
@@ -108,14 +108,14 @@ functions:
       - http:
           method: post
           <<: *default_cors
-          path: api/accounts/register
+          path: identity/accounts/register
   accounts_revision_date:
     handler: src/accounts.revisionDateHandler
     events:
       - http:
           method: get
           <<: *default_cors
-          path: api/accounts/revision-date
+          path: identity/accounts/revision-date
   device_push_token:
     handler: src/accounts.pushTokenHandler
     events:
